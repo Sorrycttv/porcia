@@ -1,0 +1,5 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/porcia_input" />
+    <item android:drawable="@drawable/porcia_chevron" android:gravity="end|center_vertical"
+        android:width="24dp" android:height="24dp" android:end="12dp" />
+</layer-list>

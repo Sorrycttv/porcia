@@ -1,0 +1,33 @@
+// Optional init script for the Windows test worker's non-ASCII classpath issue.
+// Usage: gradlew.bat :app:testDebugUnitTest --offline --no-configuration-cache -I tools/test-windows-paths.gradle
+allprojects {
+    tasks.withType(Test).configureEach {
+        doFirst {
+            def projectKey = Integer.toHexString(rootProject.projectDir.absolutePath.hashCode())
+            def stagedRoot = new File(System.getProperty('java.io.tmpdir'), "porcia-tests-${projectKey}-${name}")
+            stagedRoot.mkdirs()
+            def stagedFiles = []
+            classpath.files.eachWithIndex { entry, index ->
+                if (entry.absolutePath.codePoints().anyMatch { it > 127 } && entry.exists()) {
+                    def staged = new File(stagedRoot, "entry-${index}.jar")
+                    if (entry.isDirectory()) {
+                        // Recreate the archive so classes removed from the source cannot remain in it.
+                        def zip = new java.util.zip.ZipOutputStream(new FileOutputStream(staged))
+                        try {
+                            entry.eachFileRecurse(groovy.io.FileType.FILES) { source ->
+                                def relative = entry.toPath().relativize(source.toPath()).toString().replace('\\', '/')
+                                zip.putNextEntry(new java.util.zip.ZipEntry(relative))
+                                source.withInputStream { input -> input.transferTo(zip) }
+                                zip.closeEntry()
+                            }
+                        } finally { zip.close() }
+                    } else {
+                        java.nio.file.Files.copy(entry.toPath(), staged.toPath(), java.nio.file.StandardCopyOption.REPLACE_EXISTING)
+                    }
+                    stagedFiles.add(staged)
+                } else stagedFiles.add(entry)
+            }
+            classpath = project.files(stagedFiles)
+        }
+    }
+}

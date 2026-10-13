@@ -1,0 +1,39 @@
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - nutrition_db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks: [nutrition_net]
+
+  api:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      RETAIL_PRICE_DB: /app/data/retail_prices.sqlite3
+    volumes:
+      - retail_prices:/app/data
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "${API_BIND_HOST:-127.0.0.1}:${API_PORT:-8081}:8000"
+    networks: [nutrition_net]
+
+volumes:
+  nutrition_db:
+  retail_prices:
+
+networks:
+  nutrition_net:
+    driver: bridge

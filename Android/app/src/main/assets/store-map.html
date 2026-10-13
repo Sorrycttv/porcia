@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src https://tile.openstreetmap.org data:; connect-src 'none'">
+<style>/*LEAFLET_CSS*/</style>
+<style>html,body,#map{margin:0;width:100%;height:100%;font-family:sans-serif} .store{border-radius:50%;border:2px solid white;box-shadow:0 1px 6px #444;color:white;text-align:center;font-weight:bold;line-height:29px} .leaflet-popup-content{font-size:14px} #hint{position:absolute;top:8px;left:55px;right:8px;z-index:900;background:white;padding:7px;border-radius:6px;font-size:12px;display:none} .leaflet-control-attribution{font-size:10px}</style>
+<style>
+:root{color-scheme:light dark;--brand:#69537f;--paper:#fff;--ink:#332b3c}
+#hint,.leaflet-popup-content-wrapper,.leaflet-popup-tip,.leaflet-bar a,.leaflet-control-attribution{background:var(--paper);color:var(--ink)}
+#hint{padding:10px;border-radius:12px;line-height:1.4}
+.leaflet-control-attribution a{color:var(--brand)}
+@media(prefers-color-scheme:dark){:root{--brand:#c9b3e2;--paper:#2b2533;--ink:#eee5f5}}
+</style>
+</head><body><div id="map" aria-label="Карта продуктовых магазинов"></div><div id="hint"></div>
+<script>/*LEAFLET_JS*/</script>
+<script>
+'use strict';
+const map = L.map('map').setView([55.75,37.62],12);
+const hint = document.getElementById('hint');
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+ maxZoom:19, attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> · <a href="https://www.openstreetmap.org/fixthemap">Исправить карту</a>'
+}).on('tileerror',()=>{hint.textContent='Карта не загрузилась. Магазины и маршрут доступны в списке ниже.';hint.style.display='block';}).addTo(map);
+const storesLayer = L.layerGroup().addTo(map);
+let origin, route, choose = false, lastSignature = '';
+window.choosePosition = function(){choose=true;hint.textContent='Нажмите на точку начала маршрута';hint.style.display='block';};
+map.on('click',e=>{if(!choose)return;choose=false;hint.style.display='none';window.location.href='nutriplan-map://position?lat='+e.latlng.lat+'&lon='+e.latlng.lng;});
+window.renderStores = function(data){
+ map.invalidateSize();
+ storesLayer.clearLayers();if(origin)map.removeLayer(origin);if(route)map.removeLayer(route);
+ const bounds=[];
+ if(data.position){origin=L.circleMarker(data.position,{radius:7,color:'#1769aa',fillColor:'#1769aa',fillOpacity:1}).addTo(map).bindTooltip('Точка начала маршрута');bounds.push(data.position);}
+ const colours={'Верный':'#b91c1c','Пятёрочка':'#167c43','Магнит':'#c02635'};
+ data.stores.forEach(s=>{
+  const chosen=s.id===data.selected;
+  const marker=L.marker([s.latitude,s.longitude],{icon:L.divIcon({className:'',html:'<div class="store" style="background:'+(colours[s.chain]||'#444')+';border-color:'+(chosen?'#f6b900':'white')+'">'+(s.chain==='Пятёрочка'?'5':s.chain==='Магнит'?'М':'В')+'</div>',iconSize:[32,32],iconAnchor:[16,16]})}).addTo(storesLayer);
+  const label=document.createElement('div');label.textContent=s.chain+' · '+s.address+' · '+s.distance+' по прямой';marker.bindTooltip(label);
+  marker.on('click',()=>{if(!choose)window.location.href='nutriplan-map://store?id='+encodeURIComponent(s.id);});bounds.push([s.latitude,s.longitude]);
+ });
+ if(data.route.length){route=L.polyline(data.route,{color:'#1769aa',weight:5}).addTo(map);bounds.push(...data.route);}
+ const signature=JSON.stringify([data.position,data.stores.map(s=>s.id),data.route.length]);
+ if(bounds.length&&signature!==lastSignature){if(bounds.length===1)map.setView(bounds[0],15);else map.fitBounds(bounds,{padding:[30,30],maxZoom:16});lastSignature=signature;}
+};
+</script></body></html>

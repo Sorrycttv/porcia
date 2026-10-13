@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Экран можно прокручивать, если рацион получился длинным. -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nutriplan_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Твоё меню"
+            android:textColor="@color/nutriplan_text"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+
+        <TextView style="@style/Porcia.Subtitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="На день или неделю. Готовим без суеты." />
+        <Button android:id="@+id/planSettingsToggle" style="@style/Porcia.Button.Secondary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="Настроить меню" />
+        <LinearLayout android:id="@+id/planSettingsContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="12dp" style="@style/Porcia.Card">
+        <!-- Период: 1 или 7 дней; по умолчанию неделя. -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Период планирования"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Spinner android:background="@drawable/porcia_spinner" android:padding="12dp" android:paddingEnd="40dp"
+            android:id="@+id/periodSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:minHeight="56dp" />
+
+        <!-- Разнообразие или приготовление заготовок. -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Как часто готовить"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Spinner android:background="@drawable/porcia_spinner" android:padding="12dp" android:paddingEnd="40dp"
+            android:id="@+id/cookingModeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:minHeight="56dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Готовка с запасом: несколько порций на 2–3 дня. Срок зависит от блюда; недельный план распределяет готовку по неделе."
+            android:textColor="@color/nutriplan_muted"
+            android:textSize="14sp" />
+
+        <EditText style="@style/Porcia.Input"
+            android:id="@+id/planWishInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="72dp"
+            android:layout_marginTop="16dp"
+            android:hint="Пожелание: на неделю, готовить через день, хочу рис"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="500" />
+
+        <Button
+            android:id="@+id/applyPlanWishButton" style="@style/Porcia.Button.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Применить пожелание с ИИ"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/planWishStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/nutriplan_text"
+            android:textSize="14sp" />
+
+        <!-- Пользователь может попросить пасту, картофель и т. п. -->
+        <EditText style="@style/Porcia.Input"
+            android:id="@+id/desiredIngredientsInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Желаемые продукты: паста, картофель"
+            android:inputType="text"
+            android:minHeight="56dp" />
+
+        <CheckBox
+            android:id="@+id/useFridgeCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:checked="true"
+            android:minHeight="48dp"
+            android:text="Учитывать продукты из холодильника"
+            android:textColor="@color/nutriplan_text"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/surpriseCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Удивить себя"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/generatePlanButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:minHeight="56dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/nutriplan_green"
+            android:text="Сформировать рацион"
+            android:textAllCaps="false"
+            android:textColor="@color/nutriplan_on_primary"
+            android:textSize="17sp" />
+
+        </LinearLayout>
+        <ProgressBar
+            android:id="@+id/planProgressBar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:visibility="gone" />
+
+        <!-- Сюда Kotlin выведет блюда, калории и список покупок. -->
+        <TextView
+            android:id="@+id/planResultText" android:background="@drawable/porcia_tint" android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/nutriplan_text"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/planDetailsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <Button
+            android:id="@+id/resetPlanButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:minHeight="56dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/nutriplan_soft"
+            android:text="Сбросить сохранённый план"
+            android:textAllCaps="false"
+            android:textColor="@color/nutriplan_on_soft"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</ScrollView>

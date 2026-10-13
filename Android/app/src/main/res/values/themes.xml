@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.NutriPlan" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/nutriplan_green</item>
+        <item name="colorPrimaryVariant">@color/nutriplan_green_dark</item>
+        <item name="colorOnPrimary">@color/nutriplan_on_primary</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/nutriplan_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/nutriplan_background</item>
+        <item name="android:colorBackground">@color/nutriplan_background</item>
+        <item name="colorSurface">@color/nutriplan_surface</item>
+        <item name="colorOnSurface">@color/nutriplan_text</item>
+        <item name="android:textColorPrimary">@color/nutriplan_text</item>
+        <item name="android:textColorSecondary">@color/nutriplan_muted</item>
+        <item name="android:textColorHint">@color/nutriplan_hint</item>
+        <item name="colorControlNormal">@color/nutriplan_muted</item>
+        <item name="colorControlActivated">@color/nutriplan_link</item>
+            <item name="materialButtonStyle">@style/Porcia.Button</item>
+        <item name="editTextStyle">@style/Porcia.Input</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:navigationBarColor">@color/nutriplan_background</item>
+    </style>
+</resources>

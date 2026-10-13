@@ -1,0 +1,650 @@
+{
+  "source_url": "https://magnit.ru/",
+  "fetched_date": "2026-10-09",
+  "nuxt": [
+    {
+      "$scurrentStore": 1,
+      "$srequestShopType": 179
+    },
+    {
+      "address": 2,
+      "cityFiasId": 3,
+      "coordinates": 4,
+      "deliveryTypeList": 7,
+      "externalId": 11,
+      "isActive": 14,
+      "isFavorite": 15,
+      "storeType": 16,
+      "storeTypeV2": 17,
+      "timetableList": 18
+    },
+    "350051, Краснодарский край, Краснодар г, им. Дзержинского ул, дом № 42",
+    "7dfa745e-aa19-4688-b121-b655c11e482f",
+    {
+      "latitude": 5,
+      "longitude": 6
+    },
+    45.067057,
+    38.973527,
+    [
+      8,
+      9,
+      10
+    ],
+    "DELIVERY_TYPE_DELIVERY",
+    "DELIVERY_TYPE_PICKUP",
+    "DELIVERY_TYPE_OFFLINE",
+    {
+      "owner": 12,
+      "storeCode": 13
+    },
+    "OWNER_MAGNIT",
+    "992301",
+    true,
+    false,
+    "STORE_TYPE_ME",
+    "ME",
+    [
+      19,
+      59,
+      99,
+      139
+    ],
+    {
+      "key": 20,
+      "value": 21
+    },
+    "WORKING_TIMETABLE_TYPE_STORE",
+    {
+      "is24hOpen": 22,
+      "weeklySchedule": 23
+    },
+    false,
+    {
+      "friday": 24,
+      "monday": 29,
+      "saturday": 34,
+      "sunday": 39,
+      "thursday": 44,
+      "tuesday": 49,
+      "wednesday": 54
+    },
+    {
+      "dailySchedule": 25,
+      "isDayOff": 28
+    },
+    {
+      "closingTime": 26,
+      "openingTime": 27
+    },
+    "02:00",
+    "07:00",
+    false,
+    {
+      "dailySchedule": 30,
+      "isDayOff": 33
+    },
+    {
+      "closingTime": 31,
+      "openingTime": 32
+    },
+    "02:00",
+    "07:00",
+    false,
+    {
+      "dailySchedule": 35,
+      "isDayOff": 38
+    },
+    {
+      "closingTime": 36,
+      "openingTime": 37
+    },
+    "02:00",
+    "07:00",
+    false,
+    {
+      "dailySchedule": 40,
+      "isDayOff": 43
+    },
+    {
+      "closingTime": 41,
+      "openingTime": 42
+    },
+    "02:00",
+    "07:00",
+    false,
+    {
+      "dailySchedule": 45,
+      "isDayOff": 48
+    },
+    {
+      "closingTime": 46,
+      "openingTime": 47
+    },
+    "02:00",
+    "07:00",
+    false,
+    {
+      "dailySchedule": 50,
+      "isDayOff": 53
+    },
+    {
+      "closingTime": 51,
+      "openingTime": 52
+    },
+    "02:00",
+    "07:00",
+    false,
+    {
+      "dailySchedule": 55,
+      "isDayOff": 58
+    },
+    {
+      "closingTime": 56,
+      "openingTime": 57
+    },
+    "02:00",
+    "07:00",
+    false,
+    {
+      "key": 60,
+      "value": 61
+    },
+    "WORKING_TIMETABLE_TYPE_PICKUP",
+    {
+      "is24hOpen": 62,
+      "weeklySchedule": 63
+    },
+    false,
+    {
+      "friday": 64,
+      "monday": 69,
+      "saturday": 74,
+      "sunday": 79,
+      "thursday": 84,
+      "tuesday": 89,
+      "wednesday": 94
+    },
+    {
+      "dailySchedule": 65,
+      "isDayOff": 68
+    },
+    {
+      "closingTime": 66,
+      "openingTime": 67
+    },
+    "21:00",
+    "09:00",
+    false,
+    {
+      "dailySchedule": 70,
+      "isDayOff": 73
+    },
+    {
+      "closingTime": 71,
+      "openingTime": 72
+    },
+    "21:00",
+    "09:00",
+    false,
+    {
+      "dailySchedule": 75,
+      "isDayOff": 78
+    },
+    {
+      "closingTime": 76,
+      "openingTime": 77
+    },
+    "21:00",
+    "09:00",
+    false,
+    {
+      "dailySchedule": 80,
+      "isDayOff": 83
+    },
+    {
+      "closingTime": 81,
+      "openingTime": 82
+    },
+    "21:00",
+    "09:00",
+    false,
+    {
+      "dailySchedule": 85,
+      "isDayOff": 88
+    },
+    {
+      "closingTime": 86,
+      "openingTime": 87
+    },
+    "21:00",
+    "09:00",
+    false,
+    {
+      "dailySchedule": 90,
+      "isDayOff": 93
+    },
+    {
+      "closingTime": 91,
+      "openingTime": 92
+    },
+    "21:00",
+    "09:00",
+    false,
+    {
+      "dailySchedule": 95,
+      "isDayOff": 98
+    },
+    {
+      "closingTime": 96,
+      "openingTime": 97
+    },
+    "21:00",
+    "09:00",
+    false,
+    {
+      "key": 100,
+      "value": 101
+    },
+    "WORKING_TIMETABLE_TYPE_ORDERING",
+    {
+      "is24hOpen": 102,
+      "weeklySchedule": 103
+    },
+    false,
+    {
+      "friday": 104,
+      "monday": 109,
+      "saturday": 114,
+      "sunday": 119,
+      "thursday": 124,
+      "tuesday": 129,
+      "wednesday": 134
+    },
+    {
+      "dailySchedule": 105,
+      "isDayOff": 108
+    },
+    {
+      "closingTime": 106,
+      "openingTime": 107
+    },
+    "21:00",
+    "09:00",
+    false,
+    {
+      "dailySchedule": 110,
+      "isDayOff": 113
+    },
+    {
+      "closingTime": 111,
+      "openingTime": 112
+    },
+    "21:00",
+    "09:00",
+    false,
+    {
+      "dailySchedule": 115,
+      "isDayOff": 118
+    },
+    {
+      "closingTime": 116,
+      "openingTime": 117
+    },
+    "21:00",
+    "09:00",
+    false,
+    {
+      "dailySchedule": 120,
+      "isDayOff": 123
+    },
+    {
+      "closingTime": 121,
+      "openingTime": 122
+    },
+    "21:00",
+    "09:00",
+    false,
+    {
+      "dailySchedule": 125,
+      "isDayOff": 128
+    },
+    {
+      "closingTime": 126,
+      "openingTime": 127
+    },
+    "21:00",
+    "09:00",
+    false,
+    {
+      "dailySchedule": 130,
+      "isDayOff": 133
+    },
+    {
+      "closingTime": 131,
+      "openingTime": 132
+    },
+    "21:00",
+    "09:00",
+    false,
+    {
+      "dailySchedule": 135,
+      "isDayOff": 138
+    },
+    {
+      "closingTime": 136,
+      "openingTime": 137
+    },
+    "21:00",
+    "09:00",
+    false,
+    {
+      "key": 140,
+      "value": 141
+    },
+    "WORKING_TIMETABLE_TYPE_DELIVERY",
+    {
+      "is24hOpen": 142,
+      "weeklySchedule": 143
+    },
+    false,
+    {
+      "friday": 144,
+      "monday": 149,
+      "saturday": 154,
+      "sunday": 159,
+      "thursday": 164,
+      "tuesday": 169,
+      "wednesday": 174
+    },
+    {
+      "dailySchedule": 145,
+      "isDayOff": 148
+    },
+    {
+      "closingTime": 146,
+      "openingTime": 147
+    },
+    "21:30",
+    "09:00",
+    false,
+    {
+      "dailySchedule": 150,
+      "isDayOff": 153
+    },
+    {
+      "closingTime": 151,
+      "openingTime": 152
+    },
+    "21:30",
+    "09:00",
+    false,
+    {
+      "dailySchedule": 155,
+      "isDayOff": 158
+    },
+    {
+      "closingTime": 156,
+      "openingTime": 157
+    },
+    "21:30",
+    "09:00",
+    false,
+    {
+      "dailySchedule": 160,
+      "isDayOff": 163
+    },
+    {
+      "closingTime": 161,
+      "openingTime": 162
+    },
+    "21:30",
+    "09:00",
+    false,
+    {
+      "dailySchedule": 165,
+      "isDayOff": 168
+    },
+    {
+      "closingTime": 166,
+      "openingTime": 167
+    },
+    "21:30",
+    "09:00",
+    false,
+    {
+      "dailySchedule": 170,
+      "isDayOff": 173
+    },
+    {
+      "closingTime": 171,
+      "openingTime": 172
+    },
+    "21:30",
+    "09:00",
+    false,
+    {
+      "dailySchedule": 175,
+      "isDayOff": 178
+    },
+    {
+      "closingTime": 176,
+      "openingTime": 177
+    },
+    "21:30",
+    "09:00",
+    false,
+    "dostavka",
+    {
+      "id": 181,
+      "title": 182,
+      "link": 183,
+      "cashback": 184,
+      "image": 185,
+      "price": 186,
+      "profit": 187,
+      "oldPrice": 188,
+      "salePercent": 189,
+      "unit": 190,
+      "adult": 191,
+      "ratings": 192,
+      "badges": 197,
+      "weighted": 207,
+      "isInFavorites": 215,
+      "quantity": 216,
+      "isPromo": 217
+    },
+    "9072651204",
+    "Лук репчатый",
+    "/product/9072651204-luk_repchatyy?shopCode=992301&shopType=dostavka",
+    0,
+    "https://images-foodtech.magnit.ru/8h5ePoXwNzEJaMNgEjgLcnTu_rDDNKs_VAxQVF7u-Xg/rs:fit:416:416/plain/s3://img-dostavka/catalog/pim/goods/9072651204/image/9e5a061f641a4f5bfeee889b861e5dc4.jpeg@webp",
+    "37.09",
+    "",
+    "",
+    null,
+    "700г",
+    false,
+    {
+      "commentsCount": 193,
+      "external": 194,
+      "rating": 195,
+      "scoresCount": 196
+    },
+    5186,
+    null,
+    5,
+    128243,
+    [
+      198,
+      202
+    ],
+    {
+      "backgroundColor": 199,
+      "text": 200,
+      "textColor": 201
+    },
+    "#FF5858",
+    "Финальная цена",
+    "#FFFFFF",
+    {
+      "backgroundColor": 203,
+      "backgroundGradient": 204,
+      "text": 205,
+      "textColor": 206
+    },
+    "#3B3A3A",
+    "gradient/loyalty/premium",
+    "+5% с Премиум",
+    "#FFD69E",
+    {
+      "isWeighted": 208,
+      "minStep": 209,
+      "shelfLabel": 210,
+      "shelfWeight": 211,
+      "step": 212,
+      "unitLabel": 213,
+      "unitPrice": 214
+    },
+    true,
+    1,
+    "700г",
+    700,
+    700,
+    "1кг",
+    5299,
+    null,
+    472139,
+    false,
+    {
+      "id": 219,
+      "title": 220,
+      "link": 221,
+      "cashback": 222,
+      "image": 223,
+      "price": 224,
+      "profit": 225,
+      "oldPrice": 226,
+      "salePercent": 227,
+      "unit": 228,
+      "adult": 229,
+      "ratings": 230,
+      "badges": 235,
+      "weighted": 240,
+      "isInFavorites": 248,
+      "quantity": 249,
+      "isPromo": 250
+    },
+    "1899800733",
+    "Молоко Простоквашино пастеризованное 2.5% 930мл",
+    "/product/1899800733-moloko_prostokvashino_pasterizovannoe_2_5_930ml?shopCode=992301&shopType=dostavka",
+    0,
+    "https://images-foodtech.magnit.ru/XWFsOUuldcGrZgRrXj-X5uS6Q8RQpE_28jRPxYwyOjw/rs:fit:416:416/plain/s3://img-dostavka/catalog/pim/goods/1899800733/image/0fc205ab9182ad7917a6f42ff4fc6b8b.jpeg@webp",
+    "84.99",
+    "",
+    "",
+    null,
+    null,
+    false,
+    {
+      "commentsCount": 231,
+      "external": 232,
+      "rating": 233,
+      "scoresCount": 234
+    },
+    1898,
+    null,
+    4.9,
+    48732,
+    [
+      236
+    ],
+    {
+      "backgroundColor": 237,
+      "text": 238,
+      "textColor": 239
+    },
+    "#FF5858",
+    "Финальная цена",
+    "#FFFFFF",
+    {
+      "isWeighted": 241,
+      "minStep": 242,
+      "shelfLabel": 243,
+      "shelfWeight": 244,
+      "step": 245,
+      "unitLabel": 246,
+      "unitPrice": 247
+    },
+    false,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    2,
+    false,
+    {
+      "id": 252,
+      "title": 253,
+      "link": 254,
+      "cashback": 255,
+      "image": 256,
+      "price": 257,
+      "profit": 258,
+      "oldPrice": 259,
+      "salePercent": 260,
+      "unit": 261,
+      "adult": 262,
+      "ratings": 263,
+      "badges": 268,
+      "weighted": 269,
+      "isInFavorites": 277,
+      "quantity": 278,
+      "isPromo": 279
+    },
+    "2400008538",
+    "Рис Агро-альянс Кубанский элитный 900г",
+    "/product/2400008538-aa_ris_kubanskiy_elitnyy_0_9_agro_alyans_8?shopCode=992301&shopType=dostavka",
+    0,
+    "https://images-foodtech.magnit.ru/Eaw1REL3qdNlZ1ipsOX4Gmt6R8Xt6lhFF5yUqxiAO_A/rs:fit:416:416/plain/s3://img-dostavka/catalog/pim/goods/2400008538/image/922d7fbbd478ccc0ec8b8920af580d04.jpeg@webp",
+    "134.99",
+    "",
+    "149.99",
+    "-10%",
+    null,
+    false,
+    {
+      "commentsCount": 264,
+      "external": 265,
+      "rating": 266,
+      "scoresCount": 267
+    },
+    57,
+    null,
+    4.9,
+    1041,
+    [],
+    {
+      "isWeighted": 270,
+      "minStep": 271,
+      "shelfLabel": 272,
+      "shelfWeight": 273,
+      "step": 274,
+      "unitLabel": 275,
+      "unitPrice": 276
+    },
+    false,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    69,
+    false
+  ]
+}

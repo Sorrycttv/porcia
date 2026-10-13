@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nutriplan_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/recipeScreenTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Поиск рецепта"
+            android:textColor="@color/nutriplan_text"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <EditText style="@style/Porcia.Input"
+            android:id="@+id/dishInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:minHeight="56dp"
+            android:layout_marginTop="24dp"
+            android:hint="Например: уха или ризотто"
+            android:inputType="textCapSentences"
+            android:maxLines="1" />
+
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:minHeight="56dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/nutriplan_green"
+            android:text="Найти рецепт"
+            android:textAllCaps="false"
+            android:textColor="@color/nutriplan_on_primary" />
+
+        <ProgressBar
+            android:id="@+id/searchProgressBar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/nutriplan_text"
+            android:textSize="16sp" />
+
+        <LinearLayout android:id="@+id/recipeCardsContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" />
+    </LinearLayout>
+</ScrollView>

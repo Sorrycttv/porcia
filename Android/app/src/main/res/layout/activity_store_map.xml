@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/nutriplan_background">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="20dp" android:text="Где купить продукты" android:textSize="28sp" android:textStyle="bold" android:textColor="@color/nutriplan_text" style="@style/Porcia.Title" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingHorizontal="16dp">
+        <Button android:id="@+id/mapLocationButton" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:minHeight="56dp" android:text="Моя позиция" android:textAllCaps="false" android:textSize="13sp" style="@style/Porcia.Button" />
+        <Button android:id="@+id/mapChoosePointButton" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:minHeight="56dp" android:text="Точка на карте" android:textAllCaps="false" android:textSize="13sp" style="@style/Porcia.Button.Secondary" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="48dp" android:orientation="horizontal">
+        <Spinner android:id="@+id/mapChainSpinner" android:layout_width="0dp" android:layout_weight="2" android:layout_height="match_parent" android:background="@drawable/porcia_input" android:paddingStart="12dp" android:paddingEnd="12dp" />
+        <Spinner android:id="@+id/mapRadiusSpinner" android:layout_width="0dp" android:layout_weight="1" android:layout_height="match_parent" android:background="@drawable/porcia_input" android:paddingStart="12dp" android:paddingEnd="12dp" />
+    </LinearLayout>
+    <WebView android:id="@+id/storeMapWebView" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:minHeight="160dp" />
+    <ProgressBar android:id="@+id/mapProgress" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="3dp" android:indeterminate="true" android:visibility="gone" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="210dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="12dp">
+            <TextView android:id="@+id/mapStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="@color/nutriplan_muted" android:textSize="13sp" android:text="Нажмите «Моё местоположение» или выберите точку на карте. Начальный вид карты не определяет вашу позицию." style="@style/Porcia.Subtitle" />
+            <TextView android:id="@+id/mapSelectedStore" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textColor="@color/nutriplan_text" android:textSize="16sp" />
+            <Button android:id="@+id/mapRouteButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" android:text="Построить пеший маршрут" android:textAllCaps="false" android:enabled="false" style="@style/Porcia.Button" />
+            <TextView android:id="@+id/mapRouteResult" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="14sp" android:textColor="@color/nutriplan_text" />
+            <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:id="@+id/mapStoreList" android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" />
+            </HorizontalScrollView>
+            <Button android:id="@+id/mapProductSearchButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="56dp" android:text="Найти продукты для рациона с ИИ" android:textAllCaps="false" style="@style/Porcia.Button.Secondary" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Адрес магазина не подтверждает наличие ингредиентов. Цены из каталогов проверяются отдельно. Время пешком приблизительное." android:textSize="12sp" android:textColor="@color/nutriplan_muted" style="@style/Porcia.Subtitle" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

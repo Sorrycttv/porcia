@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/nutriplan_background" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Порция" android:layout_marginTop="0dp" style="@style/Porcia.Title" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Готовка без суеты" android:layout_marginTop="6dp" style="@style/Porcia.Subtitle" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:layout_marginTop="16dp" style="@style/Porcia.Card">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Еда вписывается в твой день" android:layout_marginTop="0dp" style="@style/Porcia.Section" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Спланируй день или неделю. Готовь с запасом, когда удобно." android:layout_marginTop="8dp" style="@style/Porcia.Subtitle" />
+            <Button android:id="@+id/planButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:backgroundTint="@color/nutriplan_green" android:text="Мой план" android:textAllCaps="false" android:textColor="@color/nutriplan_on_primary" android:textSize="17sp" style="@style/Porcia.Button" android:minHeight="56dp" />
+        </LinearLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Под рукой" android:layout_marginTop="24dp" style="@style/Porcia.Section" />
+        <Button android:id="@+id/fridgeButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Продукты дома" android:textAllCaps="false" android:textSize="17sp" style="@style/Porcia.Button.Secondary" android:minHeight="56dp" />
+        <Button android:id="@+id/recipesButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Книга блюд" android:textAllCaps="false" android:textSize="17sp" style="@style/Porcia.Button.Secondary" android:minHeight="56dp" />
+        <Button android:id="@+id/coachButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="ИИ-помощник" android:textAllCaps="false" android:textSize="17sp" style="@style/Porcia.Button.Secondary" android:minHeight="56dp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Покупки" android:layout_marginTop="20dp" style="@style/Porcia.Section" />
+        <Button android:id="@+id/storePricesButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Товары и магазины" android:textAllCaps="false" android:textSize="17sp" style="@style/Porcia.Button.Secondary" android:minHeight="56dp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Настройки и поиск" android:layout_marginTop="20dp" style="@style/Porcia.Section" />
+        <Button android:id="@+id/profileButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Мой профиль" android:textAllCaps="false" android:textSize="17sp" style="@style/Porcia.Button.Secondary" android:minHeight="56dp" />
+        <Button android:id="@+id/askRecipeButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Найти рецепт" android:textAllCaps="false" android:textSize="17sp" style="@style/Porcia.Button.Secondary" android:minHeight="56dp" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Рекомендации имеют информационный характер" android:layout_marginTop="20dp" style="@style/Porcia.Subtitle" />
+    </LinearLayout>
+</ScrollView>

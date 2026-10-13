@@ -1,0 +1,21 @@
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purple_200">#BB86FC</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#C9B3E2</color>
+    <color name="teal_700">#69537F</color>
+    <color name="nutriplan_green">#C9B3E2</color>
+    <color name="nutriplan_green_dark">#A98DC7</color>
+    <color name="nutriplan_background">#1F1B25</color>
+    <color name="nutriplan_surface">#2B2533</color>
+    <color name="nutriplan_text">#EEE5F5</color>
+    <color name="nutriplan_muted">#BFAFCD</color>
+    <color name="nutriplan_hint">#B7A6C6</color>
+    <color name="nutriplan_soft">#3D314A</color>
+    <color name="nutriplan_on_soft">#E0CDEE</color>
+    <color name="nutriplan_outline">#51425F</color>
+    <color name="nutriplan_link">#C9B3E2</color>
+    <color name="nutriplan_on_primary">#2C1F3B</color>
+</resources>

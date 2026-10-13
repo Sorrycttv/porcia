@@ -1,0 +1,33 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+local.properties
+*.local.properties
+*.jks
+*.keystore
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+# Build outputs, IDE state, environments and caches
+.gradle/
+.kotlin/
+.idea/
+**/build/
+**/__pycache__/
+.pytest_cache/
+.venv/
+venv/
+*.py[cod]
+# Runtime databases and generated packages
+data/
+*.sqlite*
+*.db
+*.apk
+*.aab
+*.zip
+*.tar.gz
+*.log
+.DS_Store
+Thumbs.db

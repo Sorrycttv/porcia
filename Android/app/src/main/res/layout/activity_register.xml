@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/nutriplan_background" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_name" android:textColor="@color/nutriplan_text" android:textSize="28sp" android:textStyle="bold" style="@style/Porcia.Title" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28dp" android:text="Регистрация" android:textColor="@color/nutriplan_text" android:textSize="28sp" android:textStyle="bold" style="@style/Porcia.Title" />
+        <EditText android:id="@+id/emailInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:hint="Электронная почта" android:inputType="textEmailAddress" android:minHeight="56dp" style="@style/Porcia.Input" />
+        <EditText android:id="@+id/passwordInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:hint="Пароль" android:inputType="textPassword" android:minHeight="56dp" style="@style/Porcia.Input" />
+        <EditText android:id="@+id/repeatPasswordInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:hint="Повторите пароль" android:inputType="textPassword" android:minHeight="56dp" style="@style/Porcia.Input" />
+        <Button android:id="@+id/registerButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Зарегистрироваться" android:textSize="16sp" style="@style/Porcia.Button" android:minHeight="56dp" android:textAllCaps="false" android:textColor="@color/nutriplan_on_primary" android:backgroundTint="@color/nutriplan_green" />
+        <TextView android:id="@+id/loginText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:clickable="true" android:focusable="true" android:gravity="center" android:padding="12dp" android:text="Уже зарегистрированы? Войти" android:textColor="@color/nutriplan_link" android:textSize="15sp" />
+    </LinearLayout>
+</ScrollView>

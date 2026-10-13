@@ -1,0 +1,50 @@
+<resources>
+    <style name="Porcia" />
+    <style name="Porcia.Title">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/nutriplan_text</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <style name="Porcia.Subtitle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/nutriplan_muted</item>
+        <item name="android:lineSpacingExtra">3dp</item>
+    </style>
+    <style name="Porcia.Section" parent="Porcia.Title">
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="Porcia.Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:minHeight">56dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:textColor">@color/nutriplan_on_primary</item>
+        <item name="backgroundTint">@color/nutriplan_green</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+    <style name="Porcia.Button.Secondary">
+        <item name="android:textColor">@color/nutriplan_on_soft</item>
+        <item name="backgroundTint">@color/nutriplan_soft</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="Porcia.Input" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/porcia_input</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/nutriplan_text</item>
+        <item name="android:textColorHint">@color/nutriplan_hint</item>
+        <item name="android:minHeight">56dp</item>
+    </style>
+    <style name="Porcia.Card">
+        <item name="android:background">@drawable/porcia_card</item>
+        <item name="android:padding">16dp</item>
+    </style>
+</resources>
